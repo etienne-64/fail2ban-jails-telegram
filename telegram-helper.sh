@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-echo $# $1 $2
-
 ID=$(cat /etc/fail2ban/script.d/telegram.id)
 KEY=$(cat /etc/fail2ban/script.d/telegram.key)
 
