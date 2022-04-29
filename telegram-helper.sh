@@ -6,11 +6,11 @@ KEY=$(cat /etc/fail2ban/script.d/telegram.key)
 
 function send {
   URL="https://api.telegram.org/bot$KEY/sendMessage"
-  DATE=$(date +"%d/%m/%y %H%M")
+  DATE=$(date +"%d/%m/%y %H:%M")
 
   SRV_HOSTNAME=$(hostname -f)
   SRV_IP=$(hostname -I | awk '{print $1}')
-  TEXT="${DATE}  - $SRV_HOSTNAME
+  TEXT="${DATE} - Host: $SRV_HOSTNAME
   $1"
 
   curl -s -d "chat_id=$ID&text=${TEXT}&disable_web_page_preview=true&parse_mode=markdown" $URL > /dev/null
