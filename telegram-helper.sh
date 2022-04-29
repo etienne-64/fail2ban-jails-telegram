@@ -2,8 +2,8 @@
 
 echo $# $1 $2
 
-ID=$(cat telegram.id)
-KEY=$(cat telegram.key)
+ID=$(cat /ect/fail2ban/script.d/telegram.id)
+KEY=$(cat /ect/fail2ban/script.d/telegram.key)
 
 
 function send {

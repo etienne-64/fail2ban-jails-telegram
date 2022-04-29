@@ -19,7 +19,9 @@ if [[ -f telegram.conf ]]; then
   # Backup current version
   mv telegram.conf telegram.conf.$DATE_STAMP.bkp
 fi
+
 cd $SCRIPT_DIR
+
 cp telegram.conf $FAIL2BAN_ACTION_PATH
 
 # === SET script-helper ===
@@ -27,20 +29,11 @@ if [[ ! -d $FAIL2BAN_SCRIPT_PATH ]]; then
   mkdir $FAIL2BAN_SCRIPT_PATH
 fi
 
-cd $FAIL2BAN_SCRIPT_PATH]
-
-if [[ -f telegram-helper.sh ]]; then
-  # Backup current version
-  mv telegram-helper.sh telegram-helper.sh.$DATE_STAMP.bkp
-fi
-
-cd $SCRIPT_DIR
-
 cp telegram-helper.sh $FAIL2BAN_SCRIPT_PATH
 cp telegram.id $FAIL2BAN_SCRIPT_PATH
 cp telegram.key $FAIL2BAN_SCRIPT_PATH
 
-chmod +x telegram-helper.sh
+chmod +x $FAIL2BAN_SCRIPT_PATH/telegram-helper.sh
 
 cd $FAIL2BAN_JAIL_PATH
 
