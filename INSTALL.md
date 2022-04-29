@@ -1,7 +1,6 @@
-# Installation on Debian 11.3
-
+# Installation
 I assume:
-- your run linux Debian
+- you run linux Debian (Test & run on debian 11.3)
 - the default jail configuration is defaults-debian.conf (in /etc/fail2ban/jail.d)
 
 ## Clone repository
@@ -20,14 +19,24 @@ If you forgot your id:
 - you get id, first name and languade
 
 ## Prepare script
-In the folder you clone (/opt/fail2ban-jails-telegram)
+In the folder **/opt/fail2ban-jails-telegram**
 ```bash
 # echo "your telegram id" > telegram.id         # echo "331640851" > telegram.id 
 # echo "your telegram key" > telegram.key       # echo "900081109:AA67e8kZe77ghj7i5fwb7H_UJBuuuuuykE4" > telegram.key
-
-
-
 # chmod +x install.sh
+```
+
+## Improve the jails
+Modify *default-debian.conf*
+
+## Run script
+```bash
 # ./install.sh
- 
+```
+
+# Update
+```bash
+# cd /opt/fail2ban-jails-telegram
+# git pull
+# ./install.sh
 ```
