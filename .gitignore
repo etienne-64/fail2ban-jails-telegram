@@ -1,5 +1,6 @@
 .idea/*
 tests/*
-
 telegram.id
 telegram.key
+
+venv/*
